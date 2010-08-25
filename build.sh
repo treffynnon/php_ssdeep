@@ -7,5 +7,7 @@ mkdir $FULL_BUILD_PATH
 cp $SRC_DIR/* $FULL_BUILD_PATH -r
 cd $FULL_BUILD_PATH
 phpize
-./configure
+./configure --enable-ssdeep
 make
+cd ../../
+cp $FULL_BUILD_PATH/modules/ssdeep.so ./ssdeep.so
