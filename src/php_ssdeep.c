@@ -11,6 +11,7 @@
 
 static function_entry ssdeep_functions[] = {
     PHP_FE(ssdeep_fuzzy_hash, NULL)
+    PHP_FE(ssdeep_fuzzy_compare, NULL)
     {NULL, NULL, NULL}
 };
 
@@ -47,5 +48,22 @@ PHP_FUNCTION(ssdeep_fuzzy_hash)
 
     fuzzy_hash_buf((unsigned char *) tohash, tohash_len, hash);
 
-    RETURN_STRING(hash, 1);
+    RETURN_STRING(hash, 0);
+}
+
+PHP_FUNCTION(ssdeep_fuzzy_compare)
+{
+    char *sig1;
+    char *sig2;
+    int sig1_len;
+    int sig2_len;
+    int match;
+
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "ss", &sig1, &sig1_len, &sig2, &sig2_len) == FAILURE) {
+        RETURN_NULL();
+    }
+
+    match = fuzzy_compare(sig1, sig2);
+
+    RETURN_LONG(match);
 }
