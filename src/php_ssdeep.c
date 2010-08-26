@@ -45,10 +45,7 @@ PHP_FUNCTION(ssdeep_fuzzy_hash)
         RETURN_NULL();
     }
 
-    php_printf("String = %s ", tohash);
-    php_printf("Length = %c ", tohash_len);
-
     fuzzy_hash_buf((unsigned char *) tohash, tohash_len, hash);
 
-    //RETURN_STRING(hash, 1);
+    RETURN_STRING(hash, 1);
 }
