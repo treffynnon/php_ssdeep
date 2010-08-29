@@ -9,19 +9,19 @@ Donec id porttitor sem. Vestibulum eu augue non enim feugiat bibendum eu pellent
 
 Mauris sit amet urna augue, ut fermentum tellus. Aliquam sit amet molestie arcu. Aenean sit amet sagittis nisl. Aenean eleifend tincidunt ipsum a commodo. Aliquam erat volutpat. Mauris venenatis, augue nec interdum pretium, libero diam venenatis massa, nec posuere libero metus in lorem. Quisque eget odio eget purus vulputate pharetra id ac quam. Aliquam.';
 
-$file = '/home/simon/ssdeep-2.5.tar.gz';
+$file = './src/php_ssdeep.c';
 
 $hash1 = ssdeep_fuzzy_hash($string1);
-var_dump('1: ' . $hash1);
+ echo 'Hash 1: ' . $hash1 . "\n";
 
 $hash2 = ssdeep_fuzzy_hash($string2);
-var_dump('2: ' . $hash2);
+echo 'Hash 2: ' . $hash2 . "\n";
 
 $hash3 = ssdeep_fuzzy_hash_filename($file);
-var_dump('3: ' . $hash3);
+echo 'Hash 3: ' . $hash3 . "\n";
 
 $match = ssdeep_fuzzy_compare($hash1, $hash2);
-var_dump('1 & 2 Match:' . $match);
+echo '1 & 2 Match:' . $match . "\n";
 
 $match2 = ssdeep_fuzzy_compare($hash2, $hash3);
-var_dump('2 & 3 Match:' . $match2);
+echo '2 & 3 Match:' . $match2 . "\n";
