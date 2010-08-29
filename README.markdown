@@ -35,7 +35,7 @@ Installation
 
 There are two options for installing this extension:
 
- 1. Use the pre-compiled .so download.
+ 1. Use the [pre-compiled .so download][3].
  2. Build the extension yourself using the instructions below.
 
 Either way you will need to copy the resultant .so file to your PHP modules directory and add a new line to your php.ini to tell PHP where to find php_ssdeep.
@@ -52,11 +52,15 @@ And you should see three hashes on your screen followed by the results of two ma
 
 > Hash 1:
 > 24:FPlUMKVsgNfgmjFadP6WboWjb8tsH4RSXqMbLFpjwPDt4tFF:9lUajiiPbbnr4RSXqMbppMZ4t3
+>
 > Hash 2:
 > 48:9lUajiiPbbnr4RSXqMbLbmo03Rcq0K/cvhQ+3/M8M5BEaB6:9HFHsGqabmoMR18hQ+308sBdk
+>
 > Hash 3:
 > 6144:pxgjtzD/W2dKdRWyguoglXjafNeS1l6bIjeQEa9TLnSptVkRwNI:pxgt7WFRWy9l21sbiLEa9T0t2RwNI
+>
 > 1 & 2 Match:57
+>
 > 2 & 3 Match:0
 
 If it comes back with message about a shared library not being available then please review the ssdeep installation instructions (below) again. Paying particular attention to the file list/directory structure. It is most likely that libs are not where they are expected to be (`/usr/lib`).
@@ -64,7 +68,7 @@ If it comes back with message about a shared library not being available then pl
 Install ssdeep package
 -------
 
-I would recommend building ssdeep from source using the [instructions][3] from it's [project site][4]. Once done **you need** to copy `.libs/*` to `/usr/lib` so that the php_ssdeep extension can see the ssdeep libraries.
+I would recommend building ssdeep from source using the [instructions][4] from it's [project site][5]. Once done **you need** to copy `.libs/*` to `/usr/lib` so that the php_ssdeep extension can see the ssdeep libraries.
 
     sudo cp .libs/* /usr/lib
 
@@ -73,14 +77,20 @@ You can use the packages supplied with Ubuntu or Debian, but they are not yet up
 If you are having trouble building or running the php_ssdeep extension it expects to see the following directory structure:
 
 > /usr/bin/ssdeep
+>
 > /usr/include/fuzzy.h
+>
 > /usr/lib/libfuzzy.a
+>
 > /usr/lib/libfuzzy.la
+>
 > /usr/lib/libfuzzy.so
+>
 > /usr/lib/libfuzzy.so.2
+>
 > /usr/lib/libfuzzy.so.2.0.0
 
-Source: [Ubuntu Karmic file list][5]
+Source: [Ubuntu Karmic file list][6]
 
 Requirements
 -------
@@ -113,6 +123,7 @@ Obviously you do not need to use the ./build.sh script if you want to manually s
 
   [1]: http://ssdeep.sourceforge.net/ "ssdeep project page"
   [2]: http://ssdeep.sourceforge.net/api/html/ "ssdeep API documentation"
-  [3]: http://ssdeep.sourceforge.net/usage.html#install "ssdeep Installation Instructions"
-  [4]: http://ssdeep.sourceforge.net/ "ssdeep Project Site"
-  [5]: http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist "Ubuntu Karmic file list for ssdeep"
+  [3]: http://github.com/treffynnon/php_ssdeep/downloads "Downloads"
+  [4]: http://ssdeep.sourceforge.net/usage.html#install "ssdeep Installation Instructions"
+  [5]: http://ssdeep.sourceforge.net/ "ssdeep Project Site"
+  [6]: http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist "Ubuntu Karmic file list for ssdeep"
