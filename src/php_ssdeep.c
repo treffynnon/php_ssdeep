@@ -1,3 +1,42 @@
+/**
+ *
+ * php_ssdeep
+ *
+ * http://github.com/treffynnon/php_ssdeep
+ *
+ * A PHP extension to expose ssdeep functionality for fuzzy
+ * hashing and comparing.
+ *
+ * Version 2.5
+ *
+ * BSD Licensed.
+ *
+ * Copyright (c) 2010, Simon Holywell
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -58,16 +97,16 @@ PHP_MINFO_FUNCTION(ssdeep) {
     if (sapi_module.phpinfo_as_text) {
         /* No HTML for you */
         php_info_print_table_row(2, "By",
-            "Simon Holywell\nhttp://www.simonholywell.com");
+                "Simon Holywell\nhttp://www.simonholywell.com");
     } else {
         /* HTMLified version */
         php_printf("<tr>"
-            "<td class=\"v\">By</td>"
-            "<td class=\"v\">"
-            "<a href=\"http://www.simonholywell.com\""
-            " alt=\"Simon Holywell\">"
-            "Simon Holywell"
-            "</a></td></tr>");
+                "<td class=\"v\">By</td>"
+                "<td class=\"v\">"
+                "<a href=\"http://www.simonholywell.com\""
+                " alt=\"Simon Holywell\">"
+                "Simon Holywell"
+                "</a></td></tr>");
     }
     php_info_print_table_end();
 }
@@ -79,7 +118,8 @@ static function_entry ssdeep_functions[] = {
     PHP_FE(ssdeep_fuzzy_hash, NULL)
     PHP_FE(ssdeep_fuzzy_compare, NULL)
     PHP_FE(ssdeep_fuzzy_hash_filename, NULL) {
-        NULL, NULL, NULL}
+        NULL, NULL, NULL
+    }
 };
 
 zend_module_entry ssdeep_module_entry = {

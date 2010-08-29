@@ -6,6 +6,8 @@ Introduction
 
 ssdeep is a utility for creating and comparing fuzzy hashes, which allows you to look determine how similar the data is. For a better explanation see the [ssdeep project page][1]. This a PHP extension that exposes the [ssdeep API][2] to PHP.
 
+Released under a [BSD license][3].
+
 Usage
 -------
 
@@ -35,7 +37,7 @@ Installation
 
 There are two options for installing this extension:
 
- 1. Use the [pre-compiled .so download][3].
+ 1. Use the [pre-compiled .so download][4].
  2. Build the extension yourself using the instructions below.
 
 Either way you will need to copy the resultant .so file to your PHP modules directory and add a new line to your php.ini to tell PHP where to find php_ssdeep.
@@ -68,7 +70,7 @@ If it comes back with message about a shared library not being available then pl
 Install ssdeep package
 -------
 
-I would recommend building ssdeep from source using the [instructions][4] from it's [project site][5]. Once done **you need** to copy `.libs/*` to `/usr/lib` so that the php_ssdeep extension can see the ssdeep libraries.
+I would recommend building ssdeep from source using the [instructions][5] from it's [project site][6]. Once done **you need** to copy `.libs/*` to `/usr/lib` so that the php_ssdeep extension can see the ssdeep libraries.
 
     sudo cp .libs/* /usr/lib
 
@@ -90,7 +92,7 @@ If you are having trouble building or running the php_ssdeep extension it expect
 >
 > /usr/lib/libfuzzy.so.2.0.0
 
-Source: [Ubuntu Karmic file list][6]
+Source: [Ubuntu Karmic file list][7]
 
 Requirements
 -------
@@ -123,7 +125,8 @@ Obviously you do not need to use the ./build.sh script if you want to manually s
 
   [1]: http://ssdeep.sourceforge.net/ "ssdeep project page"
   [2]: http://ssdeep.sourceforge.net/api/html/ "ssdeep API documentation"
-  [3]: http://github.com/treffynnon/php_ssdeep/downloads "Downloads"
-  [4]: http://ssdeep.sourceforge.net/usage.html#install "ssdeep Installation Instructions"
-  [5]: http://ssdeep.sourceforge.net/ "ssdeep Project Site"
-  [6]: http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist "Ubuntu Karmic file list for ssdeep"
+  [3]: http://en.wikipedia.org/wiki/BSD_licenses "BSD licence"
+  [4]: http://github.com/treffynnon/php_ssdeep/downloads "Downloads"
+  [5]: http://ssdeep.sourceforge.net/usage.html#install "ssdeep Installation Instructions"
+  [6]: http://ssdeep.sourceforge.net/ "ssdeep Project Site"
+  [7]: http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist "Ubuntu Karmic file list for ssdeep"
