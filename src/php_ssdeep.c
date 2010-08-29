@@ -66,8 +66,7 @@ PHP_MINFO_FUNCTION(ssdeep) {
             "<td class=\"v\">"
             "<a href=\"http://www.simonholywell.com\""
             " alt=\"Simon Holywell\">"
-            "<img src=\"http://www.simonholywell.com/logo.png\" />"
-
+            "Simon Holywell"
             "</a></td></tr>");
     }
     php_info_print_table_end();
