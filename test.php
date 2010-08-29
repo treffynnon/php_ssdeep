@@ -1,4 +1,43 @@
 <?php
+/**
+ *
+ * php_ssdeep
+ *
+ * http://github.com/treffynnon/php_ssdeep
+ *
+ * A PHP extension to expose ssdeep functionality for fuzzy
+ * hashing and comparing.
+ *
+ * Version 2.5
+ *
+ * BSD Licensed.
+ *
+ * Copyright (c) 2010, Simon Holywell
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
 $string1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed enim ante. Suspendisse eu massa ut libero congue aliquam. Morbi vehicula, lacus id faucibus ullamcorper, ante dui sodales velit, et laoreet nisl elit sed quam. Mauris quis purus odio, sed ornare urna. Sed eleifend sem ut nisl ultrices nec varius arcu malesuada. Quisque gravida mollis dictum. Nulla in neque vel mauris tincidunt lacinia ac placerat augue. Sed nec condimentum nisl. Integer congue leo nec elit sollicitudin placerat. Donec quis quam non erat ultricies lacinia. Sed sit amet massa vel dolor semper convallis vitae placerat lacus. Pellentesque ipsum erat, ultrices in mollis tincidunt, cursus sed justo. Nunc metus lectus, vehicula a gravida eget, venenatis sed elit.
 
 Sed et nisl dolor, vitae interdum nulla. Donec egestas diam sit amet urna tincidunt elementum nec eu purus. Proin eget egestas enim. Pellentesque lobortis mattis orci id sodales. Nunc imperdiet bibendum enim vitae adipiscing. In.';
