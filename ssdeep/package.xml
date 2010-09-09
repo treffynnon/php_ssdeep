@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+ <name>ssdeep</name>
+ <channel>pecl.php.net</channel>
+ <summary>ssdeep fuzzy hashing for php</summary>
+ <description/>
+ <lead>
+  <name>Simon Holywell</name>
+  <user>Treffynnon</user>
+  <email>simon@holywell.com.au</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-09-09</date>
+ <time>22:41:22</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Initial PECL compatible release.</notes>
+ <contents>
+  <dir name="/">
+   <dir name="data">
+    <file role="data" name="test_data1"/>
+    <file role="data" name="test_data2"/>
+   </dir>
+   <dir name="examples">
+    <file role="doc" name="example.php"/>
+   </dir>
+   <dir name="tests">
+    <file role="test" name="ssdeep.phpt"/>
+   </dir>
+   <file role="src" name="config.m4"/>
+   <file role="src" name="php_ssdeep.h"/>
+   <file role="src" name="ssdeep.c"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.8</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <providesextension>ssdeep</providesextension>
+ <extsrcrelease/>
+</package>
