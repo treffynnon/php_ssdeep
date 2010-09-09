@@ -48,19 +48,20 @@ Donec id porttitor sem. Vestibulum eu augue non enim feugiat bibendum eu pellent
 
 Mauris sit amet urna augue, ut fermentum tellus. Aliquam sit amet molestie arcu. Aenean sit amet sagittis nisl. Aenean eleifend tincidunt ipsum a commodo. Aliquam erat volutpat. Mauris venenatis, augue nec interdum pretium, libero diam venenatis massa, nec posuere libero metus in lorem. Quisque eget odio eget purus vulputate pharetra id ac quam. Aliquam.';
 
-$file = './src/php_ssdeep.c';
+$file = __FILE__;
 
 $hash1 = ssdeep_fuzzy_hash($string1);
  echo 'Hash 1: ' . $hash1 . "\n";
-
+var_dump($hash1);
 $hash2 = ssdeep_fuzzy_hash($string2);
 echo 'Hash 2: ' . $hash2 . "\n";
-
+var_dump($hash2);
 $hash3 = ssdeep_fuzzy_hash_filename($file);
 echo 'Hash 3: ' . $hash3 . "\n";
-
+var_dump($hash3);
 $match = ssdeep_fuzzy_compare($hash1, $hash2);
 echo '1 & 2 Match:' . $match . "\n";
-
+var_dump($match);
 $match2 = ssdeep_fuzzy_compare($hash2, $hash3);
 echo '2 & 3 Match:' . $match2 . "\n";
+var_dump($match2);
