@@ -24,10 +24,6 @@
  <notes>Initial PECL compatible release.</notes>
  <contents>
   <dir name="/">
-   <dir name="data">
-    <file role="data" name="test_data1"/>
-    <file role="data" name="test_data2"/>
-   </dir>
    <dir name="examples">
     <file role="doc" name="example.php"/>
    </dir>
