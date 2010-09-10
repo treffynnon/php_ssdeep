@@ -7,7 +7,7 @@
  * A PHP extension to expose ssdeep functionality for fuzzy
  * hashing and comparing.
  *
- * Version 2.5
+ * Version 1.0.0
  *
  * BSD Licensed.
  *
@@ -39,7 +39,7 @@
 
 #ifndef PHP_SSDEEP_H
 #define PHP_SSDEEP_H 1
-#   define PHP_SSDEEP_EXTVER "0.1.0"
+#   define PHP_SSDEEP_EXTVER "1.0.0"
 #   define PHP_SSDEEP_EXTNAME "ssdeep"
     PHP_FUNCTION(ssdeep_fuzzy_hash);
     PHP_FUNCTION(ssdeep_fuzzy_compare);
