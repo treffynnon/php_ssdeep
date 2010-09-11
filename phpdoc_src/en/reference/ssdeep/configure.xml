@@ -9,11 +9,6 @@
   <link xlink:href="&url.pecl.package;ssdeep">&url.pecl.package;ssdeep</link>
  </para>
 
- <para>
-  The latest PECL/ssdeep Win32 DLL is available here:
-  <link xlink:href="&url.pecl.win.ext;php_ssdeep.dll">php_ssdeep.dll</link>
- </para>
-
 </section>
 
 

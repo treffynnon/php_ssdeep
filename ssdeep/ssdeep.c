@@ -147,8 +147,12 @@ PHP_FUNCTION(ssdeep_fuzzy_compare) {
         RETURN_NULL();
     }
     match = fuzzy_compare(signature1, signature2);
-
-    RETURN_LONG(match);
+	
+	if(match < 0 || match > 100) {
+		RETURN_FALSE;
+	} else {
+		RETURN_LONG(match);
+	}
 }
 /* }}} */
 

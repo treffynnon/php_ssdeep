@@ -4,21 +4,22 @@
 <refentry xml:id="function.ssdeep-fuzzy-compare" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>ssdeep_fuzzy_compare</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Calculates the match score between two fuzzy hash signatures</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>ssdeep_fuzzy_compare</methodname>
+   <type>integer</type><methodname>ssdeep_fuzzy_compare</methodname>
    <methodparam><type>string</type><parameter>signature1</parameter></methodparam>
    <methodparam><type>string</type><parameter>signature2</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Calculates the match score between <parameter>signature1</parameter>
+   and <parameter>signature2</parameter> using <link xlink:href="&url.ssdeep.ctph;">
+   context-triggered piecewise hashing</link>, and returns the match
+   score.
   </para>
-
-  &warn.undocumented.func;
 
  </refsect1>
 
@@ -29,7 +30,7 @@
     <term><parameter>signature1</parameter></term>
     <listitem>
      <para>
-      
+      The first fuzzy hash signature string.
      </para>
     </listitem>
    </varlistentry>
@@ -37,7 +38,7 @@
     <term><parameter>signature2</parameter></term>
     <listitem>
      <para>
-      
+      The second fuzzy hash signature string.
      </para>
     </listitem>
    </varlistentry>
@@ -47,7 +48,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Returns an integer from 0 to 100 on success, <literal>FALSE</literal> otherwise. 
   </para>
  </refsect1>
 

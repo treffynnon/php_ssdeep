@@ -4,21 +4,20 @@
 <refentry xml:id="function.ssdeep-fuzzy-hash" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>ssdeep_fuzzy_hash</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Create a fuzzy hash from a string</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>ssdeep_fuzzy_hash</methodname>
+   <type>string</type><methodname>ssdeep_fuzzy_hash</methodname>
    <methodparam><type>string</type><parameter>to_hash</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   <function>ssdeep_fuzzy_hash</function> calculates the hash of 
+   <parameter>to_hash</parameter> using <link xlink:href="&url.ssdeep.ctph;">
+   context-triggered piecewise hashing</link>, and returns that hash.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -28,7 +27,7 @@
     <term><parameter>to_hash</parameter></term>
     <listitem>
      <para>
-      
+      The input string.
      </para>
     </listitem>
    </varlistentry>
@@ -38,7 +37,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Returns a string on success, <literal>FALSE</literal> otherwise.
   </para>
  </refsect1>
 

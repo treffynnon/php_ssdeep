@@ -4,73 +4,41 @@ php_ssdeep (A PHP extension to utilise ssdeep's API)
 Introduction
 -------
 
-ssdeep is a utility for creating and comparing fuzzy hashes, which allows you to look determine how similar the data is. For a better explanation see the [ssdeep project page][1]. This a PHP extension that exposes the [ssdeep API][2] to PHP.
+ssdeep is a utility for creating and comparing fuzzy hashes, which allows you to determine how similar the data is. For a better explanation see the [ssdeep project page][1]. This a PHP extension that exposes the [ssdeep API][2] to PHP.
 
 Released under a [BSD license][3].
+
+File Layout
+-------
+
+  - **ssdeep** (extension source files)
+    - **docs** (generated HTML documentation)
+    - **examples** (PHP example files demonstrating usage)
+    - **tests** (PHP test files)
+  - **phpdoc_src** (phpdoc source files for the extension)
+    - **en** (English documentation)
 
 Usage
 -------
 
-Three functions are exposed:
-
-  - ssdeep_fuzzy_hash_filename()
-  - ssdeep_fuzzy_hash()
-  - ssdeep_fuzzy_compare()
-
-ssdeep_fuzzy_hash_filename() allows you to supply a path to a file you would like to get a hash of:
-
-    $hash1 = ssdeep_fuzzy_hash_filename('/home/simon/text.text');
-
-
-ssdeep_fuzzy_hash() will return a hash when it is supplied a string:
-
-    $hash2 = ssdeep_fuzzy_hash('A piece of text would go here!');
-
-ssdeep_fuzzy_compare() compares two hashes and returns their match percentage:
-
-    $match = ssdeep_fuzzy_compare($hash1, $hash2);
-
-Also see the test.php file for more examples of how this can be used.
+See `ssdeep/docs/*` for more information.
 
 Installation
 -------
 
-There are two options for installing this extension:
+See `ssdeep/docs/*` for more information.
 
- 1. Use the [pre-compiled .so download][4].
- 2. Build the extension yourself using the instructions below.
+Requirements
+-------
 
-Either way you will need to copy the resultant .so file to your PHP modules directory and add a new line to your php.ini to tell PHP where to find php_ssdeep.
-
-    extension=/path/to/ssdeep.so
-
-If you have not got a working copy of ssdeep already installed then please follow the instructions available below before continuing here.
-
-Now we have everything setup we can run the test code; in a console run:
-
-    php -f /path/to/test.php
-
-And you should see three hashes on your screen followed by the results of two matches/comparisons:
-
-> Hash 1:
-> 24:FPlUMKVsgNfgmjFadP6WboWjb8tsH4RSXqMbLFpjwPDt4tFF:9lUajiiPbbnr4RSXqMbppMZ4t3
->
-> Hash 2:
-> 48:9lUajiiPbbnr4RSXqMbLbmo03Rcq0K/cvhQ+3/M8M5BEaB6:9HFHsGqabmoMR18hQ+308sBdk
->
-> Hash 3:
-> 6144:pxgjtzD/W2dKdRWyguoglXjafNeS1l6bIjeQEa9TLnSptVkRwNI:pxgt7WFRWy9l21sbiLEa9T0t2RwNI
->
-> 1 & 2 Match:57
->
-> 2 & 3 Match:0
-
-If it comes back with message about a shared library not being available then please review the ssdeep installation instructions (below) again. Paying particular attention to the file list/directory structure. It is most likely that libs are not where they are expected to be (`/usr/lib`).
+  - Linux (tested on Ubuntu)
+  - ssdeep (tested with 2.5 built from source)
+  - PHP (tested on 5.3)
 
 Install ssdeep package
 -------
 
-I would recommend building ssdeep from source using the [instructions][5] from it's [project site][6]. Once done **you need** to copy `.libs/*` to `/usr/lib` so that the php_ssdeep extension can see the ssdeep libraries.
+I would recommend building ssdeep from source using the [instructions][4] from it's [project site][5]. Once done **you need** to copy `.libs/*` to `/usr/lib` so that the php_ssdeep extension can see the ssdeep libraries.
 
     sudo cp .libs/* /usr/lib
 
@@ -92,14 +60,7 @@ If you are having trouble building or running the php_ssdeep extension it expect
 >
 > /usr/lib/libfuzzy.so.2.0.0
 
-Source: [Ubuntu Karmic file list][7]
-
-Requirements
--------
-
-  - Linux (tested on Ubuntu)
-  - ssdeep (tested with 2.5 built from source)
-  - PHP (tested on 5.3)
+Source: [Ubuntu Karmic file list][6]
 
 Building the extension yourself
 -------
@@ -123,10 +84,46 @@ If you now run `ls` on the directory then you will see that ssdeep.so has been c
 Obviously you do not need to use the ./build.sh script if you want to manually specify the build commands yourself. It essentially handles configuring, phpizing, making and then copy out the resultant ssdeep.so file to the base directory.
 
 
+PECL ssdeep PHP Extension Licence
+-------
+This extension is under the BSD Licence:
+
+Copyright (c) 2010, Simon Holywell
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+ssdeep Licensing Exemption
+-------
+
+Although ssdeep and the fuzzy hashing API are usually licensed under GNU GPLv2 Jesse Kornblum has licenced them to PECL under the terms of the Perl Artistic Licence with the following declaration:
+"I hereby license ssdeep, the current version and all subsequent versions, under the terms of the Perl Artistic License, for inclusion into the PECL."
+See http://news.php.net/php.pecl.dev/7625 for the verbatim email.
+
+
   [1]: http://ssdeep.sourceforge.net/ "ssdeep project page"
   [2]: http://ssdeep.sourceforge.net/api/html/ "ssdeep API documentation"
   [3]: http://en.wikipedia.org/wiki/BSD_licenses "BSD licence"
-  [4]: http://github.com/treffynnon/php_ssdeep/downloads "Downloads"
-  [5]: http://ssdeep.sourceforge.net/usage.html#install "ssdeep Installation Instructions"
-  [6]: http://ssdeep.sourceforge.net/ "ssdeep Project Site"
-  [7]: http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist "Ubuntu Karmic file list for ssdeep"
+  [4]: http://ssdeep.sourceforge.net/usage.html#install "ssdeep Installation Instructions"
+  [5]: http://ssdeep.sourceforge.net/ "ssdeep Project Site"
+  [6]: http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist "Ubuntu Karmic file list for ssdeep"
