@@ -10,6 +10,8 @@ You need a copy of the PHP manual and its build tools, which can be obtained fro
    - doc-base
    - en
 
+Now get the necessaries from GitHub:
+
  1. [PHP documentation build tools][1] (clone to doc-base)
  2. [English manual source][2] (clone to en)
 
