@@ -36,7 +36,7 @@ Requirements
   - PHP (tested on 5.3)
 
 
-Usage
+PECL Packaging
 -------
 
 Package for PECL using Pyrus:
