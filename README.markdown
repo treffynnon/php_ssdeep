@@ -35,6 +35,19 @@ Requirements
   - ssdeep (tested with 2.5 built from source)
   - PHP (tested on 5.3)
 
+
+Usage
+-------
+
+Package for PECL using Pyrus:
+
+  1. Got to the `ssdeep` directory
+  2. `php /path/to/pyrus.phar pickle ssdeep --donotpackage`
+  3. `php /path/to/pyrus.phar package package.xml`
+
+For some reason that I am as yet unable to fathom running the straight `php /path/to/pyrus.phar pickle ssdeep` does not work and produces a broken .tgz release archive.
+
+
 Install ssdeep package
 -------
 
