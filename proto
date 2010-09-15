@@ -1,3 +1,0 @@
-string ssdeep_fuzzy_hash(string to_hash)
-string ssdeep_fuzzy_hash_filename(string file_name)
-long ssdeep_fuzzy_compare(string signature1, string signature2)
