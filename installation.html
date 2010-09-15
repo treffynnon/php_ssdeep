@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="940.css" />
+	<title>Installation | ssdeep PHP Extension</title>
+</head>
+<body>
+
+<div id="wrap">
+	<div id="header">
+		<h1><a href="/index.html">ssdeep PHP/PECL Extension</a></h1>
+	</div>
+
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="installation.html">Installation</a></li>
+			<li><a href="licence.html">Licence Exemption</a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<h2>Installing the ssdeep PECL extension</h2> 
+		<p>After you have installed a copy of ssdeep (<a href="#install-ssdeep">see below</a> for more information) you simply run the following command:</p> 
+		<pre>
+			<code>sudo pecl install ssdeep</code>
+		</pre>
+		
+		<h2 id="install-ssdeep">Installing the ssdeep libraries</h2> 
+		<p>I would recommend building ssdeep from source using the <a href="http://ssdeep.sourceforge.net/usage.html#install" title="ssdeep Installation Instructions">instructions</a> from it's <a href="http://ssdeep.sourceforge.net/" title="ssdeep Project Site">project site</a>.</p>
+		<p>Once done <strong>you need</strong> to copy <code>.libs/*</code> to <code>/usr/lib</code> so that the php_ssdeep extension can see the ssdeep libraries.</p> 
+		<pre>
+			<code>sudo cp .libs/* /usr/lib</code>
+		</pre> 
+		<p>You can use the packages supplied with Ubuntu or Debian, but they are not yet updated to the latest version of ssdeep.</p> 
+		<p>If you are having trouble building or running the php_ssdeep extension it expects to see the following directory structure:</p> 
+		<blockquote cite="http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist">
+			/usr/bin/ssdeep<br/>
+			/usr/include/fuzzy.h<br/> 
+			/usr/lib/libfuzzy.a<br/> 
+			/usr/lib/libfuzzy.la<br/> 
+			/usr/lib/libfuzzy.so<br/> 
+			/usr/lib/libfuzzy.so.2<br/> 
+			/usr/lib/libfuzzy.so.2.0.0<br/>
+			<cite>Source: <a href="http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist">Ubuntu Karmic File List</a></cite>
+		</blockquote>
+	</div>
+
+	<div id="sidebar">
+		<h3>ssdeep PECL Links</h3>
+		<ul>
+			<li><a href="http://pecl.php.net/package/ssdeep" title="ssdeep PECL page">ssdeep PECL page</a></li> 
+			<li><a href="http://docs.php.net/manual/en/book.ssdeep.php" title="ssdeep PHP Documentation">ssdeep PHP documentation</a></li> 
+			<li><a href="http://svn.php.net/pecl/ssdeep" title="SVN repo/source for ssdeep">ssdeep PECL source</a></li> 
+		</ul>
+
+		<h3>Useful Resources</h3>
+		<ul>
+			<li><a href="http://ssdeep.sourceforge.net" title="ssdeep Sourceforge Project page">ssdeep Sourceforge Project Page</a></li> 
+			<li><a href="http://dfrws.org/2006/proceedings/12-Kornblum.pdf" title="Fuzzy Hashing Article by Jesse Kornblum">Fuzzy Hashing Article</a></li> 
+		</ul>
+	</div>
+	<div style="clear: both;"> </div>
+
+	<div id="footer">
+		<p>&copy; Copyright 2010 <a href="http://www.simonholywell.com">Simon Holywell</a> | Design by <a href="http://www.blogliber.com">Blog Liber</a></p>
+	</div>
+</div>
+</body>
+</html>
