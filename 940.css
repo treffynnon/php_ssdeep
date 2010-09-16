@@ -53,7 +53,8 @@ color: #fff;
 font-size: 13px;
 font-weight: 600;
 }
-#menu ul li a:hover {
+#menu ul li a:hover,
+#menu ul li a.active {
 color: #fff;
 background: #CF4D4F;
 }
