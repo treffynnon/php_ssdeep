@@ -50,6 +50,11 @@
 			/usr/lib/libfuzzy.so.2.0.0<br/>
 			<cite>Source: <a href="http://packages.ubuntu.com/en/karmic/i386/ssdeep/filelist">Ubuntu Karmic File List</a></cite>
 		</blockquote>
+                <p>If this still does not resolve the problem then uninstall the ssdeep pecl extension:</p>
+                <blockquote>pecl uninstall ssdeep</blockquote>
+                <p>And re-install the extension specifying the path to the ssdeep libraries:</p>
+                <blockquote>LD_LIBRARY_PATH=/usr/lib/:$LD_LIBRARY_PATH pecl install ssdeep</blockquote>
+                <p>Where /usr/lib/ is the directory containing the fuzzy libraries installed earlier.</p>
 	</div>
 
 	<div id="sidebar">
